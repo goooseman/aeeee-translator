@@ -39,7 +39,7 @@
                 ev.preventDefault();
                 var text = $('#input-text').val();
                 text = text.replace(/e/g, 'ə').replace(/е/g, 'ə');
-                text = text.replace(/a/g, 'ə').replace(/a/g, 'æ');
+                text = text.replace(/a/g, 'ə').replace(/а/g, 'æ');
                 $('#result-wrapper').show();
                 $('#result').html(text.replace(/\n/, '<br>'));
                 return false;
