@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Аееəə транслятор</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Аееəə транслятор</h1>
+            <h2>Хəр знаəт зачəм он</h2>
+        </div>
+        <form id="ae-form" style="margin-bottom: 20px;">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Текст</label>
+                <textarea type="text" class="form-control" id="input-text" placeholder="Текст, хули"></textarea>
+            </div>
+            <button class="btn btn-primary">Go!</button>
+        </form>
+        <div id="result-wrapper">
+            <p>
+                <b>Результат:</b>
+            </p>
+            <p id="result"></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+        $('document').ready(function() {
+            $('#ae-form').submit(function(ev) {
+                ev.preventDefault();
+                var text = $('#input-text').val();
+                text = text.replace(/e/g, 'ə').replace(/е/g, 'ə');
+                $('#result-wrapper').show();
+                $('#result').text(text);
+                return false;
+            });
+        });
+        </script>
+    </div>
+</body>
+
+</html>
