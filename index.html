@@ -40,7 +40,7 @@
                 var text = $('#input-text').val();
                 text = text.replace(/e/g, 'ə').replace(/е/g, 'ə');
                 $('#result-wrapper').show();
-                $('#result').text(text);
+                $('#result').html(text.replace(/\n/, '<br>'));
                 return false;
             });
         });
